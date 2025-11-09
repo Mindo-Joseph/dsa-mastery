@@ -36,7 +36,7 @@ echo "📝 Step 2: Creating pull request..."
 # Get current branch or create new one
 CURRENT_BRANCH=$(git branch --show-current)
 
-if [ "$CURRENT_BRANCH" = "main" ]; then
+if [ "$CURRENT_BRANCH" = "main" ] || [ "$CURRENT_BRANCH" = "master" ]; then
     # Create new branch
     BRANCH_NAME="solution/$PROBLEM_NAME"
     git checkout -b "$BRANCH_NAME"
@@ -48,8 +48,17 @@ git add "$PROBLEM_FILE"
 git commit -m "Solve: $PROBLEM_NAME" || true
 git push -u origin HEAD
 
-# Create PR
-gh pr create --fill --body "## Solution: $PROBLEM_NAME
+# Check if there's a related GitHub issue
+ISSUE_NUM=""
+RELATED_ISSUES=$(gh issue list --label problem --state open --json number,title --jq '.[] | select(.title | contains("'"$PROBLEM_NAME"'")) | .number' | head -1)
+
+if [ -n "$RELATED_ISSUES" ]; then
+    ISSUE_NUM=$RELATED_ISSUES
+    echo "🔗 Found related issue: #$ISSUE_NUM"
+fi
+
+# Create PR body
+PR_BODY="## Solution: $PROBLEM_NAME
 
 ### Tests
 ✅ All tests passing
@@ -63,8 +72,20 @@ gh pr create --fill --body "## Solution: $PROBLEM_NAME
 <!-- Explain your approach and trade-offs -->
 
 ---
-*Ready for review* 🚀
-" || echo "PR might already exist"
+
+"
+
+# Add issue reference if found
+if [ -n "$ISSUE_NUM" ]; then
+    PR_BODY="${PR_BODY}Closes #${ISSUE_NUM}
+
+"
+fi
+
+PR_BODY="${PR_BODY}*Ready for review* 🚀"
+
+# Create PR
+gh pr create --fill --body "$PR_BODY" || echo "PR might already exist"
 
 echo ""
 echo "========================================"
