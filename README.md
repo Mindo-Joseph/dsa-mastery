@@ -14,15 +14,15 @@
 
 ### **New Here? Start With:**
 
-1. **📖 [START_HERE.md](./START_HERE.md)** - Overview & what you get
-2. **⚙️ [COMPLETE_SETUP.md](./COMPLETE_SETUP.md)** - 30-minute setup guide
-3. **📋 [SYSTEM_OVERVIEW.txt](./SYSTEM_OVERVIEW.txt)** - Visual system map
+1. **📖 [AUTOMATED_WORKFLOW.md](./AUTOMATED_WORKFLOW.md)** - **Start here!** Fully automated AI-driven system
+2. **⚙️ [COMPLETE_SETUP.md](./COMPLETE_SETUP.md)** - 15-minute one-time setup
+3. **📋 [GEMINI_FILE_SEARCH.md](./GEMINI_FILE_SEARCH.md)** - RAG system for your PDFs
 
 ### **Ready to Begin?**
 
-After setup, say to Claude:
-```
-"Start pattern 1: Two Pointers"
+After setup, run every morning:
+```bash
+./scripts/daily.sh
 ```
 
 ---
@@ -42,8 +42,8 @@ Your writeups published online - Public accountability
 - Quick learning resources
 - Direct links to everything
 
-### **4. NotebookLM Integration**
-Query your curated books/problems for theory & practice
+### **4. Gemini File Search (AI-Powered RAG)**
+Query your entire codebase, notes & patterns with semantic search
 
 ### **5. AI Senior Review**
 Every PR reviewed as Google L6 interviewer would
@@ -53,7 +53,7 @@ Every PR reviewed as Google L6 interviewer would
 ## ⚡ The Workflow
 
 ```
-Query NotebookLM → Solve (30min) → PR (5min) → Review (10min) → Optimize (10min) → Merge → Next
+Query File Search → Solve (30min) → PR (5min) → Review (10min) → Optimize (10min) → Merge → Next
 ```
 
 **Per problem**: ~60 minutes
@@ -68,6 +68,7 @@ Query NotebookLM → Solve (30min) → PR (5min) → Review (10min) → Optimize
 |------|---------|
 | [START_HERE.md](./START_HERE.md) | **Read this first** - Complete overview |
 | [COMPLETE_SETUP.md](./COMPLETE_SETUP.md) | **Follow this** - 30-min setup guide |
+| [GEMINI_FILE_SEARCH.md](./GEMINI_FILE_SEARCH.md) | **AI Knowledge Base** - Setup & usage guide |
 | [SYSTEM_OVERVIEW.txt](./SYSTEM_OVERVIEW.txt) | Visual system map |
 | [SENIOR_WORKFLOW.md](./SENIOR_WORKFLOW.md) | Daily workflow & standards |
 | [EXAMPLE_SOLUTION.md](./EXAMPLE_SOLUTION.md) | What senior-level looks like |
@@ -223,4 +224,4 @@ You're on track when:
 
 ---
 
-*Built with: Rust, GitHub Pages, Google Calendar, NotebookLM, Claude Code*
+*Built with: Rust, GitHub Pages, Google Calendar, Gemini File Search, Claude Code*

@@ -1,0 +1,11 @@
+{
+  "current_pattern": "two_pointers",
+  "target_problems_per_day": 2,
+  "difficulty_progression": [
+    "easy",
+    "medium",
+    "hard"
+  ],
+  "mastery_threshold": 5,
+  "adaptive_mode": true
+}

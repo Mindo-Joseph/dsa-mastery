@@ -1,83 +1,227 @@
-# DSA Mastery Journey
+---
+layout: default
+title: "DSA Mastery - Journey to Google"
+---
 
-**Goal**: Google Senior Engineer (L5+)
-**Timeline**: 12 weeks
-**Standard**: Every solution meets senior interview bar
+# 🚀 DSA Mastery Journey
+
+<div style="text-align: center; margin: 2rem 0; padding: 2rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 12px; color: white;">
+  <h2 style="margin: 0; color: white;">Google Senior Engineer (L5+)</h2>
+  <p style="margin: 0.5rem 0; opacity: 0.9;">12-week intensive • First principles • Public accountability</p>
+</div>
 
 ---
 
-## 🎯 My Progress
+## 📊 Current Progress
 
-**Current Pattern**: Two Pointers
-**Problems Solved**: 0 / 60+
-**Days Active**: 0
-**Current Streak**: 0 🔥
+<div class="stats-grid">
+  <div class="stat-card">
+    <div class="stat-value">1</div>
+    <div class="stat-label">Day</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">0</div>
+    <div class="stat-label">Problems Solved</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">1</div>
+    <div class="stat-label">Writeups</div>
+  </div>
+  <div class="stat-card">
+    <div class="stat-value">0</div>
+    <div class="stat-label">Days Streak 🔥</div>
+  </div>
+</div>
+
+<div class="card">
+  <h3>🎯 Current Focus</h3>
+  <p><strong>Pattern:</strong> Two Pointers</p>
+  <p><strong>Status:</strong> <span class="badge badge-success">Learning</span></p>
+  <p><strong>Target:</strong> 7 problems in 3 days</p>
+
+  <div class="progress-bar">
+    <div class="progress-fill" style="width: 0%"></div>
+  </div>
+  <p style="font-size: 0.875rem; color: var(--text-tertiary);">0% complete</p>
+</div>
 
 ---
 
 ## 📚 Pattern Writeups
 
 ### Foundation Patterns (Weeks 1-2)
-- [Two Pointers](patterns/01-two-pointers.html) - *In Progress*
-- [Sliding Window](patterns/02-sliding-window.html) - *Locked*
-- [Binary Search](patterns/03-binary-search.html) - *Locked*
+
+<div class="pattern-list">
+  <a href="patterns/two-pointers.html" class="pattern-card">
+    <div>
+      <div class="pattern-title">🔹 Two Pointers</div>
+      <div class="pattern-meta">First principles • O(n) optimization • 7 problems</div>
+    </div>
+    <span class="badge badge-success">Active</span>
+  </a>
+
+  <div class="pattern-card" style="opacity: 0.5; cursor: not-allowed;">
+    <div>
+      <div class="pattern-title">🔸 Sliding Window</div>
+      <div class="pattern-meta">Subarray problems • Dynamic windows • 7 problems</div>
+    </div>
+    <span class="badge badge-info">Locked</span>
+  </div>
+
+  <div class="pattern-card" style="opacity: 0.5; cursor: not-allowed;">
+    <div>
+      <div class="pattern-title">🔍 Binary Search</div>
+      <div class="pattern-meta">O(log n) search • Variations • 6 problems</div>
+    </div>
+    <span class="badge badge-info">Locked</span>
+  </div>
+</div>
 
 ### Data Structure Patterns (Weeks 3-4)
-- [Fast & Slow Pointers](patterns/04-fast-slow-pointers.html) - *Locked*
-- [Linked List In-Place Reversal](patterns/05-linked-list-reversal.html) - *Locked*
-- [Tree BFS](patterns/06-tree-bfs.html) - *Locked*
-- [Tree DFS](patterns/07-tree-dfs.html) - *Locked*
+
+<div class="pattern-list">
+  <div class="pattern-card" style="opacity: 0.5; cursor: not-allowed;">
+    <div>
+      <div class="pattern-title">🐢 Fast & Slow Pointers</div>
+      <div class="pattern-meta">Linked list cycles • Floyd's algorithm • 5 problems</div>
+    </div>
+    <span class="badge badge-info">Locked</span>
+  </div>
+
+  <div class="pattern-card" style="opacity: 0.5; cursor: not-allowed;">
+    <div>
+      <div class="pattern-title">🔄 Linked List Reversal</div>
+      <div class="pattern-meta">In-place operations • Pointers • 5 problems</div>
+    </div>
+    <span class="badge badge-info">Locked</span>
+  </div>
+
+  <div class="pattern-card" style="opacity: 0.5; cursor: not-allowed;">
+    <div>
+      <div class="pattern-title">🌳 Tree BFS</div>
+      <div class="pattern-meta">Level-order traversal • Queue-based • 6 problems</div>
+    </div>
+    <span class="badge badge-info">Locked</span>
+  </div>
+
+  <div class="pattern-card" style="opacity: 0.5; cursor: not-allowed;">
+    <div>
+      <div class="pattern-title">🌲 Tree DFS</div>
+      <div class="pattern-meta">Recursion • Backtracking • 6 problems</div>
+    </div>
+    <span class="badge badge-info">Locked</span>
+  </div>
+</div>
 
 ### Advanced Patterns (Weeks 5-6)
-- [Graphs](patterns/08-graphs.html) - *Locked*
-- [Heaps & Priority Queues](patterns/09-heaps.html) - *Locked*
+
+<div class="pattern-list">
+  <div class="pattern-card" style="opacity: 0.5; cursor: not-allowed;">
+    <div>
+      <div class="pattern-title">🕸️ Graphs</div>
+      <div class="pattern-meta">BFS/DFS • Topological sort • Union-Find • 12 problems</div>
+    </div>
+    <span class="badge badge-info">Locked</span>
+  </div>
+
+  <div class="pattern-card" style="opacity: 0.5; cursor: not-allowed;">
+    <div>
+      <div class="pattern-title">⛰️ Heaps & Priority Queues</div>
+      <div class="pattern-meta">K-way merge • Top K • 6 problems</div>
+    </div>
+    <span class="badge badge-info">Locked</span>
+  </div>
+</div>
 
 ### Problem-Solving Paradigms (Weeks 7-10)
-- [Dynamic Programming](patterns/10-dynamic-programming.html) - *Locked*
-- [Backtracking](patterns/11-backtracking.html) - *Locked*
-- [Advanced Techniques](patterns/12-advanced.html) - *Locked*
+
+<div class="pattern-list">
+  <div class="pattern-card" style="opacity: 0.5; cursor: not-allowed;">
+    <div>
+      <div class="pattern-title">💎 Dynamic Programming</div>
+      <div class="pattern-meta">1D, 2D, Advanced DP • 23 problems</div>
+    </div>
+    <span class="badge badge-info">Locked</span>
+  </div>
+
+  <div class="pattern-card" style="opacity: 0.5; cursor: not-allowed;">
+    <div>
+      <div class="pattern-title">🔙 Backtracking</div>
+      <div class="pattern-meta">Permutations • Combinations • 6 problems</div>
+    </div>
+    <span class="badge badge-info">Locked</span>
+  </div>
+
+  <div class="pattern-card" style="opacity: 0.5; cursor: not-allowed;">
+    <div>
+      <div class="pattern-title">💚 Greedy Algorithms</div>
+      <div class="pattern-meta">Optimal choices • Proof techniques • 7 problems</div>
+    </div>
+    <span class="badge badge-info">Locked</span>
+  </div>
+</div>
 
 ---
 
-## 🚀 Recent Solutions
+## 🚀 Recent Activity
 
-*No solutions yet. Start solving!*
-
----
-
-## 📊 Statistics
-
-- **Total Problems**: 0
-- **Easy**: 0
-- **Medium**: 0
-- **Hard**: 0
-- **Success Rate**: 0%
-- **Average Time**: 0 min
+<div class="card">
+  <h3>Latest Updates</h3>
+  <ul style="list-style: none; padding: 0;">
+    <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+      <strong>Today</strong> - Started Two Pointers pattern
+    </li>
+    <li style="padding: 0.5rem 0; border-bottom: 1px solid var(--border-color);">
+      <strong>Today</strong> - Generated AI writeup from sources
+    </li>
+    <li style="padding: 0.5rem 0;">
+      <strong>Today</strong> - Set up Gemini RAG system
+    </li>
+  </ul>
+</div>
 
 ---
 
 ## 🎓 Learning Philosophy
 
-This is my public commitment to mastering data structures and algorithms from **first principles**, not just pattern memorization. Every solution here is:
+<div class="card">
+  <blockquote>
+    This is my public commitment to mastering data structures and algorithms from <strong>first principles</strong>, not just pattern memorization.
+  </blockquote>
 
-- ✅ Optimal time/space complexity
-- ✅ Clean, idiomatic Rust
-- ✅ Comprehensively tested
-- ✅ Clearly explained
-- ✅ Reviewed to Google L5+ standards
-
----
-
-## 🔗 Links
-
-- [GitHub Repository](https://github.com/yourusername/dsa-mastery)
-- [Google Calendar](https://calendar.google.com/...) - Daily schedule
-- [Progress Tracker](progress.html)
-
----
-
-*Last Updated: 2025-11-09*
+  <p>Every solution here is:</p>
+  <ul>
+    <li>✅ <strong>Optimal</strong> time/space complexity with proof</li>
+    <li>✅ <strong>Clean</strong>, idiomatic Rust code</li>
+    <li>✅ <strong>Comprehensively tested</strong> with edge cases</li>
+    <li>✅ <strong>Clearly explained</strong> with first principles</li>
+    <li>✅ <strong>Reviewed</strong> to Google L5+ standards</li>
+  </ul>
+</div>
 
 ---
 
-**"Excellence is not a destination; it is a continuous journey that never ends."** - Brian Tracy
+## 🔗 Resources
+
+<div class="card">
+  <h3>Quick Links</h3>
+  <ul>
+    <li><a href="https://github.com/yourusername/dsa-mastery">📦 GitHub Repository</a></li>
+    <li><a href="#">📅 Google Calendar</a> - Daily schedule</li>
+    <li><a href="#">📊 Progress Tracker</a></li>
+    <li><a href="#">🤖 Gemini RAG</a> - AI knowledge base</li>
+  </ul>
+</div>
+
+---
+
+<div style="text-align: center; padding: 2rem; background: var(--bg-secondary); border-radius: 12px; margin-top: 3rem;">
+  <p style="font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem;">
+    "Excellence is not a destination; it is a continuous journey that never ends."
+  </p>
+  <p style="color: var(--text-tertiary);">— Brian Tracy</p>
+</div>
+
+---
+
+*Last Updated: {{ site.time | date: '%B %d, %Y' }}*
