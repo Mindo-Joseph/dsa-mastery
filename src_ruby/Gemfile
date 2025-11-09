@@ -1,0 +1,13 @@
+source 'https://rubygems.org'
+
+# Testing
+gem 'rspec', '~> 3.12'
+gem 'test-unit', '~> 3.6'
+
+# Code quality
+gem 'rubocop', '~> 1.50'
+gem 'rubocop-performance', '~> 1.17'
+
+# Visualization support
+gem 'rouge', '~> 4.1'  # Syntax highlighting
+gem 'json', '~> 2.6'   # Trace data export

@@ -1,0 +1,15 @@
+[package]
+name = "dsa_mastery"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[dev-dependencies]
+criterion = "0.5"
+
+[profile.release]
+opt-level = 3
+
+[profile.bench]
+opt-level = 3
