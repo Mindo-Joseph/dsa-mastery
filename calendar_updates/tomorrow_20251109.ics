@@ -1,0 +1,12 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//DSA Mastery//Adaptive Scheduler//EN
+BEGIN:VEVENT
+UID:1762698592.65853@dsa-mastery.local
+DTSTAMP:20251109T142952Z
+DTSTART:20251110T090052
+DTEND:20251110T103052
+SUMMARY:🎯 DSA: Two Pointers - Easy
+DESCRIPTION:\n<h2>🎯 Today's Mission</h2>\n<p><strong>Mastery comes from repetition. Review strengthens foundations.</strong></p>\n\n<h3>📋 Your Task</h3>\n<p><strong>Pattern</strong>: Two Pointers</p>\n<p><strong>Difficulty</strong>: Easy</p>\n<p><strong>Problems to solve</strong>: 1</p>\n<p><strong>Why</strong>: Reviewing fundamentals - success rate low</p>\n\n<h3>🚀 Workflow</h3>\n<ol>\n<li>Say to Claude: "Give me a easy two pointers problem"</li>\n<li>Solve in Rust (30 min)</li>\n<li>Generate visualization (5 min)</li>\n<li>Optional: Solve in Ruby (15 min)</li>\n<li>Create PR (5 min)</li>\n<li>Get Claude review (10 min)</li>\n<li>Optimize & merge (10 min)</li>\n</ol>\n\n<h3>🎓 Quick Resources</h3>\n<ul>\n<li>🎥 <a href='https://www.youtube.com/watch?v=On03HWe2tZM'>Two Pointers Explained</a> (8 min)</li>\n<li>📄 <a href='https://leetcode.com/discuss/study-guide/1688903/'>Why Two Pointers Works</a> (5 min read)</li>\n\n</ul>\n\n<h3>📊 Your Progress</h3>\n<ul>\n<li>Learning velocity: 0.0 problems/day</li>\n<li>Pattern mastery: 0/5</li>\n<li>Success rate: 0.0%</li>\n</ul>\n\n<h3>🔗 Quick Links</h3>\n<ul>\n<li>📚 <a href="https://yourusername.github.io/dsa-mastery">Progress Dashboard</a></li>\n<li>💻 <a href="https://github.com/yourusername/dsa-mastery">GitHub Repo</a></li>\n<li>📊 <a href="https://yourusername.github.io/dsa-mastery/progress.html">Statistics</a></li>\n</ul>\n\n<hr>\n<p><em>This event was automatically adapted to your learning pace.</em></p>\n<p><em>After solving, run: <code>python scripts/calendar/update_tomorrow.py</code></em></p>\n
+END:VEVENT
+END:VCALENDAR

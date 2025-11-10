@@ -1,3 +1,11 @@
+---
+layout: default
+title: "Two Pointers Pattern - First Principles to Mastery"
+show_breadcrumb: true
+category: "Patterns"
+category_url: "/#-pattern-writeups"
+---
+
 # Two Pointers Pattern - First Principles to Mastery
 
 **Pattern Difficulty**: ⭐ Fundamental (Start here)
@@ -6,6 +14,12 @@
 
 ---
 
+<div class="card">
+
+</div>
+
+
+## First Principles: Why Does This Exist?
 ## First Principles: Why Does This Exist?
 
 ### The Problem with Naive Approaches
@@ -53,6 +67,12 @@ Similarly:
 
 ---
 
+<div class="card">
+
+</div>
+
+
+## Pattern Recognition: When to Use Two Pointers
 ## Pattern Recognition: When to Use Two Pointers
 
 ### ✅ Use Two Pointers When:
@@ -72,6 +92,12 @@ Similarly:
 
 ---
 
+<div class="card">
+
+</div>
+
+
+## Senior-Level Understanding: Complexity Analysis
 ## Senior-Level Understanding: Complexity Analysis
 
 ### Why is it O(n)?
@@ -93,6 +119,12 @@ This is **amortized analysis** - a senior engineer explains this clearly.
 
 ---
 
+<div class="card">
+
+</div>
+
+
+## The Pattern Template (Rust)
 ## The Pattern Template (Rust)
 
 ### Basic Two Pointers (Opposite Ends)
@@ -143,6 +175,12 @@ where
 
 ---
 
+<div class="card">
+
+</div>
+
+
+## Common Variations (Senior Interview Level)
 ## Common Variations (Senior Interview Level)
 
 ### 1. Two Sum (Sorted Array)
@@ -172,6 +210,12 @@ where
 
 ---
 
+<div class="card">
+
+</div>
+
+
+## Edge Cases (Google Interview Checklist)
 ## Edge Cases (Google Interview Checklist)
 
 Always consider:
@@ -186,6 +230,12 @@ Always consider:
 
 ---
 
+<div class="card">
+
+</div>
+
+
+## Rust-Specific Considerations
 ## Rust-Specific Considerations
 
 ### 1. Borrowing vs Ownership
@@ -216,6 +266,12 @@ nums.windows(2).position(|w| w[0] + w[1] == target)
 
 ---
 
+<div class="card">
+
+</div>
+
+
+## Trade-offs (Senior Thinking)
 ## Trade-offs (Senior Thinking)
 
 ### Sorting First vs Hash Map
@@ -237,6 +293,12 @@ nums.windows(2).position(|w| w[0] + w[1] == target)
 
 ---
 
+<div class="card">
+
+</div>
+
+
+## Practice Problems (In Order)
 ## Practice Problems (In Order)
 
 ### Easy (Warm-up)
@@ -255,6 +317,12 @@ nums.windows(2).position(|w| w[0] + w[1] == target)
 
 ---
 
+<div class="card">
+
+</div>
+
+
+## Interview Communication Template
 ## Interview Communication Template
 
 When you identify a two pointers problem:
@@ -275,6 +343,12 @@ When you identify a two pointers problem:
 
 ---
 
+<div class="card">
+
+</div>
+
+
+## Next Steps
 ## Next Steps
 
 1. Implement the template in `src/patterns/two_pointers/mod.rs`
@@ -288,3 +362,6 @@ When you identify a two pointers problem:
 **Remember**: The pattern is just a tool. The understanding is the weapon.
 
 Ready for your first problem?
+
+
+</div>
