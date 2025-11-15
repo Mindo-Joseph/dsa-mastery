@@ -55,27 +55,46 @@ BEFORE YOU START - THINK:
 /// Solution for Two Sum II - Input Array Is Sorted
 ///
 /// # Approach
-/// TODO: Explain your approach here
+/// Two pointers starting from opposite ends of the sorted array.
 ///
 /// # Complexity
-/// - Time: O(?) - TODO: Explain why
-/// - Space: O(?) - TODO: Explain why
+/// - Time: O(n) - Single pass, each pointer moves at most n times
+/// - Space: O(1) - Only two pointer variables
 ///
 /// # Pattern Applied
 /// Two Pointers (Opposite Ends)
 ///
 /// # Key Insights
-/// TODO: What makes this work?
+/// Sorted order enables O(1) decisions to eliminate possibilities.
+/// When sum < target: move left right (need larger number).
+/// When sum > target: move right left (need smaller number).
+/// This monotonic property reduces O(n²) to O(n).
+// Time: O(n)
+// Space: O(1)
 pub fn two_sum(numbers: &[i32], target: i32) -> Vec<i32> {
-    // TODO: Implement your solution
-    //
-    // HINTS (only look if stuck >15 min):
-    // 1. Start with left = 0, right = len - 1
-    // 2. What if sum < target? Which pointer to move?
-    // 3. What if sum > target? Which pointer to move?
-    // 4. Don't forget: return 1-indexed positions!
+    let mut left = 0;
+    let mut right = numbers.len() - 1;
 
-    vec![] // Replace this
+    while left < right {
+        let sum = numbers[left] + numbers[right];
+
+        match sum.cmp(&target) {
+            std::cmp::Ordering::Equal => {
+                // Found! Return 1-indexed positions
+                return vec![(left + 1) as i32, (right + 1) as i32];
+            }
+            std::cmp::Ordering::Less => {
+                // Sum too small - need larger number
+                left += 1;
+            }
+            std::cmp::Ordering::Greater => {
+                // Sum too large - need smaller number
+                right -= 1;
+            }
+        }
+    }
+
+    vec![] // Problem guarantees solution exists
 }
 
 #[cfg(test)]
@@ -103,12 +122,35 @@ mod tests {
         assert_eq!(two_sum(&numbers, target), vec![1, 2]);
     }
 
-    // TODO: Add more test cases:
-    // - All same numbers
-    // - Large array
-    // - Negative numbers
-    // - Target at boundaries
-    // - Two elements (minimum case)
+    #[test]
+    fn test_duplicates() {
+        let numbers = vec![1, 1, 1, 1, 1, 5];
+        assert_eq!(two_sum(&numbers, 6), vec![1, 6]);
+    }
+
+    #[test]
+    fn test_large_array() {
+        let numbers: Vec<i32> = (1..=1000).collect();
+        assert_eq!(two_sum(&numbers, 1999), vec![999, 1000]);
+    }
+
+    #[test]
+    fn test_all_negatives() {
+        let numbers = vec![-10, -5, -2, 0, 3, 7];
+        assert_eq!(two_sum(&numbers, -3), vec![1, 6]); // -10 + 7 = -3
+    }
+
+    #[test]
+    fn test_two_elements_min() {
+        let numbers = vec![1, 2];
+        assert_eq!(two_sum(&numbers, 3), vec![1, 2]);
+    }
+
+    #[test]
+    fn test_max_min_values() {
+        let numbers = vec![-1000, -500, 0, 500, 1000];
+        assert_eq!(two_sum(&numbers, -500), vec![1, 4]); // -1000 + 500 = -500
+    }
 }
 
 /*
