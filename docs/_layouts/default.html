@@ -7,27 +7,21 @@
 
     {% seo %}
 
-    <!-- Custom Notion + Linear inspired styles -->
+    <!-- Google Material Design styles -->
     <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
     <!-- Font optimization -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <style>
-      /* Page-specific overrides */
-      body {
-        margin: 0;
-        padding: 0;
-      }
-    </style>
+    <meta name="theme-color" content="#1a73e8">
   </head>
   <body>
     <!-- Breadcrumb navigation -->
     {% if page.show_breadcrumb %}
     <div class="container-lg">
       <div class="breadcrumb no-print">
-        <a href="{{ '/' | relative_url }}">🏠 Home</a>
+        <a href="{{ '/' | relative_url }}">Home</a>
         <span class="breadcrumb-separator">›</span>
         {% if page.category %}
         <a href="{{ page.category_url | relative_url }}">{{ page.category }}</a>
@@ -46,11 +40,11 @@
     <!-- Footer -->
     <div class="container-lg">
       <div class="footer no-print">
-        <p>
-          <strong>DSA Mastery</strong> - Journey to Google Senior Engineer
+        <p style="font-weight: 500; color: var(--text-secondary);">
+          DSA Mastery
         </p>
-        <p>
-          Built with 🦀 Rust, Gemini RAG, and Claude Code
+        <p style="color: var(--text-tertiary);">
+          AI-enhanced learning system for Google L5+ engineering standards
         </p>
         {% if site.github.private != true %}
         <p>
@@ -60,14 +54,15 @@
           {% endif %}
         </p>
         {% endif %}
-        <p style="font-size: 0.75rem; color: var(--text-tertiary);">
-          Last updated: {{ site.time | date: '%B %d, %Y' }}
+        <p style="font-size: 0.75rem; color: var(--text-tertiary); margin-top: 16px;">
+          Built with Rust, Gemini RAG, and Claude Code • Last updated: {{ site.time | date: '%B %d, %Y' }}
         </p>
       </div>
     </div>
 
-    <!-- Smooth scroll -->
+    <!-- Smooth scroll and animations -->
     <script>
+      // Smooth scroll for anchor links
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
           e.preventDefault();
@@ -78,10 +73,10 @@
         });
       });
 
-      // Add animation to cards on scroll
+      // Intersection Observer for fade-in animations
       const observerOptions = {
         threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
+        rootMargin: '0px 0px -50px 0px'
       };
 
       const observer = new IntersectionObserver((entries) => {
@@ -93,11 +88,14 @@
         });
       }, observerOptions);
 
-      document.querySelectorAll('.card, .pattern-card, .stat-card').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'all 0.6s ease-out';
-        observer.observe(el);
+      // Observe cards and feature elements
+      document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.card, .feature-card, .stat-card, .pattern-card').forEach(el => {
+          el.style.opacity = '0';
+          el.style.transform = 'translateY(20px)';
+          el.style.transition = 'opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+          observer.observe(el);
+        });
       });
     </script>
   </body>
