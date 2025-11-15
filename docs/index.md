@@ -1,98 +1,91 @@
 ---
 layout: default
-title: "DSA Mastery - AI-Enhanced Learning"
+title: "DSA Mastery"
 ---
 
 <div class="hero">
-  <h1>Master Data Structures & Algorithms</h1>
-  <p class="lead">An AI-enhanced learning system for reaching Google Senior Engineer level (L5+) through first principles, automated quality guardrails, and intelligent guidance.</p>
-  <div style="display: flex; gap: 16px; justify-content: center; margin-top: 32px;">
+  <h1>Data Structures & Algorithms</h1>
+  <p class="lead">Twelve weeks. First principles. Google L5+ engineering standards.</p>
+  <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
     <a href="#progress" class="button-primary">View Progress</a>
-    <a href="infrastructure.html" class="button-secondary">Explore Infrastructure</a>
+    <a href="infrastructure.html" class="button-secondary">Infrastructure</a>
+  </div>
+</div>
+
+<div class="section" id="progress">
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-value" id="stat-days">—</div>
+      <div class="stat-label">Days</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-value" id="stat-problems">—</div>
+      <div class="stat-label">Problems</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-value" id="stat-streak">—</div>
+      <div class="stat-label">Streak</div>
+    </div>
+
+    <div class="stat-card">
+      <div class="stat-value" id="stat-writeups">—</div>
+      <div class="stat-label">Writeups</div>
+    </div>
+  </div>
+
+  <div class="card mt-12">
+    <h4 class="card-title" id="current-pattern-title">Two Pointers</h4>
+    <div class="progress-bar">
+      <div class="progress-fill" id="pattern-progress" style="width: 0%"></div>
+    </div>
+    <p style="font-size: 15px; color: var(--text-tertiary); margin: 16px 0 0 0;">
+      <span id="patterns-completed">0</span> of <span id="total-patterns">15</span> patterns complete
+    </p>
   </div>
 </div>
 
 <div class="section">
-  <div class="section-header text-center">
-    <h2 class="section-title">Built for Excellence</h2>
-    <p class="section-subtitle" style="margin: 0 auto;">Production-grade infrastructure that combines AI assistance with rigorous engineering standards</p>
-  </div>
+  <h2>Infrastructure</h2>
+  <p class="section-subtitle">Production-grade Claude Code infrastructure with auto-activating skills, AI specialist agents, and automated quality enforcement.</p>
 
   <div class="feature-grid">
     <div class="feature-card">
       <div class="feature-icon">🎯</div>
       <h3 class="feature-title">Auto-Activating Skills</h3>
-      <p class="feature-description">Context-aware guidance that loads exactly when needed based on file patterns, keywords, and intent. No manual configuration required.</p>
+      <p class="feature-description">Context-aware guidance that loads on demand. Pattern recognition, complexity analysis, and review standards — exactly when needed.</p>
     </div>
 
     <div class="feature-card">
       <div class="feature-icon">🤖</div>
-      <h3 class="feature-title">AI Specialist Agents</h3>
-      <p class="feature-description">Pattern analyzer for deep insights, complexity prover for rigorous mathematics, and L6 code reviewer for production standards.</p>
+      <h3 class="feature-title">Specialist Agents</h3>
+      <p class="feature-description">Pattern analyzer explains why algorithms work. Complexity prover delivers rigorous proofs. Rust reviewer enforces L6 standards.</p>
     </div>
 
     <div class="feature-card">
       <div class="feature-icon">🛡️</div>
-      <h3 class="feature-title">Safety Guardrails</h3>
-      <p class="feature-description">Automated enforcement of testing, complexity annotations, and git safety. No destructive operations, tests must pass, proofs required.</p>
+      <h3 class="feature-title">Quality Guardrails</h3>
+      <p class="feature-description">Tests must pass. Complexity must be proven. Git operations must be safe. Automation enforces engineering discipline.</p>
     </div>
 
     <div class="feature-card">
       <div class="feature-icon">📚</div>
-      <h3 class="feature-title">Gemini RAG</h3>
-      <p class="feature-description">Query CLRS, EPI, and CTCI directly with zero hallucinations. Citation-backed answers from authoritative sources only.</p>
+      <h3 class="feature-title">Zero Hallucination RAG</h3>
+      <p class="feature-description">Query CLRS, EPI, and CTCI directly. Every answer comes with citations. No speculation, only authoritative sources.</p>
     </div>
-  </div>
-</div>
-
-<div class="section" id="progress">
-  <div class="section-header text-center">
-    <h2 class="section-title">Live Progress</h2>
-    <p class="section-subtitle" style="margin: 0 auto;">Real-time stats generated from git commits and file analysis</p>
-  </div>
-
-  <div class="stats-grid" id="stats-container">
-    <div class="stat-card">
-      <div class="stat-value" id="stat-days">1</div>
-      <div class="stat-label">Days Active</div>
-    </div>
-
-    <div class="stat-card">
-      <div class="stat-value" id="stat-problems">0</div>
-      <div class="stat-label">Problems Solved</div>
-    </div>
-
-    <div class="stat-card">
-      <div class="stat-value" id="stat-streak">0</div>
-      <div class="stat-label">Day Streak</div>
-    </div>
-
-    <div class="stat-card">
-      <div class="stat-value" id="stat-writeups">4</div>
-      <div class="stat-label">Writeups</div>
-    </div>
-  </div>
-
-  <div class="card mt-8">
-    <h4 class="card-title">Current Focus: Two Pointers</h4>
-    <div class="progress-bar">
-      <div class="progress-fill" id="pattern-progress" style="width: 0%"></div>
-    </div>
-    <p class="text-secondary mt-4 mb-0" style="font-size: 0.875rem;">0 of 15 patterns completed • Target: 70 problems in 12 weeks</p>
   </div>
 </div>
 
 <div class="section">
-  <div class="section-header">
-    <h2 class="section-title">Pattern Catalog</h2>
-    <p class="section-subtitle">15 core patterns covering arrays, strings, graphs, trees, and dynamic programming</p>
-  </div>
+  <h2>Patterns</h2>
+  <p class="section-subtitle">Fifteen core patterns. Hundreds of problems. One systematic approach.</p>
 
   <div class="pattern-list">
     <a href="patterns/two-pointers.html" class="pattern-card">
       <div>
         <div class="pattern-title">Two Pointers</div>
-        <div class="pattern-meta">Opposite ends, same direction, fast-slow</div>
+        <div class="pattern-meta">Opposite ends · Same direction · Fast and slow</div>
       </div>
       <span class="badge badge-info">Active</span>
     </a>
@@ -100,7 +93,7 @@ title: "DSA Mastery - AI-Enhanced Learning"
     <a href="patterns/sliding-window.html" class="pattern-card">
       <div>
         <div class="pattern-title">Sliding Window</div>
-        <div class="pattern-meta">Fixed size, variable size, dynamic</div>
+        <div class="pattern-meta">Fixed size · Variable size · Optimization</div>
       </div>
       <span class="badge badge-warning">Next</span>
     </a>
@@ -108,178 +101,159 @@ title: "DSA Mastery - AI-Enhanced Learning"
     <a href="patterns/binary-search.html" class="pattern-card">
       <div>
         <div class="pattern-title">Binary Search</div>
-        <div class="pattern-meta">Classic, rotated arrays, search space</div>
+        <div class="pattern-meta">Classic · Rotated · Search space</div>
       </div>
       <span class="badge">Locked</span>
     </a>
 
-    <a href="patterns.html" class="pattern-card" style="background: var(--grey-50);">
+    <a href="patterns.html" class="pattern-card">
       <div>
-        <div class="pattern-title">View All Patterns</div>
-        <div class="pattern-meta">Fast & Slow Pointers, Islands, Trees, Graphs, DP...</div>
+        <div class="pattern-title">View all patterns</div>
+        <div class="pattern-meta">Fast & Slow · Islands · Trees · Graphs · DP</div>
       </div>
-      <span style="color: var(--google-blue);">→</span>
+      <span style="color: var(--accent); font-weight: 600;">→</span>
     </a>
   </div>
 </div>
 
 <div class="section">
-  <div class="section-header">
-    <h2 class="section-title">Infrastructure Components</h2>
-    <p class="section-subtitle">Reusable system built once, adaptable to any project type</p>
-  </div>
-
-  <div class="grid grid-3">
-    <div class="card">
-      <h4 class="card-title">4 Active Skills</h4>
-      <p class="card-description">Auto-activating guidance modules with progressive disclosure</p>
-      <ul style="font-size: 0.875rem; margin: 0; padding-left: 20px;">
-        <li>problem-solver</li>
-        <li>gemini-rag-integration</li>
-        <li>pr-review-standards</li>
-        <li>skill-developer</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h4 class="card-title">3 AI Agents</h4>
-      <p class="card-description">Autonomous specialist agents for deep analysis</p>
-      <ul style="font-size: 0.875rem; margin: 0; padding-left: 20px;">
-        <li>pattern-analyzer</li>
-        <li>complexity-prover</li>
-        <li>rust-reviewer</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h4 class="card-title">5 Guardrail Hooks</h4>
-      <p class="card-description">Automated quality enforcement at every step</p>
-      <ul style="font-size: 0.875rem; margin: 0; padding-left: 20px;">
-        <li>git-guardrails</li>
-        <li>test-validator</li>
-        <li>complexity-validator</li>
-        <li>skill-activation</li>
-        <li>post-tool-tracker</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="text-center mt-12">
-    <a href="infrastructure.html" class="button-primary">Explore Full Infrastructure</a>
-  </div>
-</div>
-
-<div class="section">
-  <div class="section-header">
-    <h2 class="section-title">Daily Workflow</h2>
-    <p class="section-subtitle">Automated end-to-end process from problem selection to code review</p>
-  </div>
+  <h2>Workflow</h2>
+  <p class="section-subtitle">Automated end-to-end. From problem selection to production-ready code.</p>
 
   <div class="grid grid-2">
     <div class="card">
-      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
-        <div style="width: 32px; height: 32px; background: var(--google-blue-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 500; color: var(--google-blue);">1</div>
-        <h4 style="margin: 0;">Select Problem</h4>
-      </div>
-      <p class="text-secondary" style="font-size: 0.9375rem; margin: 0;">Choose from pattern catalog. Gemini RAG provides first principles explanation from CLRS, EPI, or CTCI.</p>
+      <h5 style="color: var(--text-tertiary); font-size: 14px; margin-bottom: 12px;">01 — SELECT</h5>
+      <h4 style="margin: 0 0 8px 0;">Choose problem from catalog</h4>
+      <p style="font-size: 15px; margin: 0;">Gemini RAG provides first principles from CLRS. Theory before implementation.</p>
     </div>
 
     <div class="card">
-      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
-        <div style="width: 32px; height: 32px; background: var(--google-blue-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 500; color: var(--google-blue);">2</div>
-        <h4 style="margin: 0;">Implement Solution</h4>
-      </div>
-      <p class="text-secondary" style="font-size: 0.9375rem; margin: 0;">Skills auto-activate based on context. Write idiomatic Rust with comprehensive tests and complexity proofs.</p>
+      <h5 style="color: var(--text-tertiary); font-size: 14px; margin-bottom: 12px;">02 — IMPLEMENT</h5>
+      <h4 style="margin: 0 0 8px 0;">Write idiomatic Rust solution</h4>
+      <p style="font-size: 15px; margin: 0;">Skills auto-activate. Comprehensive tests. Complexity with proof.</p>
     </div>
 
     <div class="card">
-      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
-        <div style="width: 32px; height: 32px; background: var(--google-blue-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 500; color: var(--google-blue);">3</div>
-        <h4 style="margin: 0;">Safe Commit</h4>
-      </div>
-      <p class="text-secondary" style="font-size: 0.9375rem; margin: 0;">Use <code>commit-solution.sh</code>. Tests must pass, complexity annotations required. Git safety enforced.</p>
+      <h5 style="color: var(--text-tertiary); font-size: 14px; margin-bottom: 12px;">03 — VALIDATE</h5>
+      <h4 style="margin: 0 0 8px 0;">Safe commit with guardrails</h4>
+      <p style="font-size: 15px; margin: 0;">Tests enforced. Complexity validated. Git safety automatic.</p>
     </div>
 
     <div class="card">
-      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
-        <div style="width: 32px; height: 32px; background: var(--google-blue-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 500; color: var(--google-blue);">4</div>
-        <h4 style="margin: 0;">AI Review</h4>
-      </div>
-      <p class="text-secondary" style="font-size: 0.9375rem; margin: 0;">L6 rust-reviewer provides verdict: PASS ✅ / REVISE 🔄 / FAIL ❌ with specific action items.</p>
+      <h5 style="color: var(--text-tertiary); font-size: 14px; margin-bottom: 12px;">04 — REVIEW</h5>
+      <h4 style="margin: 0 0 8px 0;">L6 code review verdict</h4>
+      <p style="font-size: 15px; margin: 0;">PASS, REVISE, or FAIL. Specific action items. Production standards.</p>
     </div>
   </div>
 </div>
 
 <div class="section">
-  <div class="section-header text-center">
-    <h2 class="section-title">Engineering Standards</h2>
-    <p class="section-subtitle" style="margin: 0 auto;">Every solution meets Google L5+ quality bar</p>
-  </div>
+  <h2>Standards</h2>
+  <p class="section-subtitle">Every solution meets Google L5+ quality bar.</p>
 
   <div class="grid grid-2">
     <div class="card">
-      <h4 class="card-title">Optimal Complexity</h4>
-      <p class="text-secondary" style="margin: 0;">Time and space complexity with rigorous mathematical proofs. Lower bound arguments for optimality.</p>
+      <h4 class="card-title">Optimal complexity</h4>
+      <p style="margin: 0; font-size: 15px; color: var(--text-secondary);">Time and space with rigorous proofs. Lower bounds for optimality. No hand-waving.</p>
     </div>
 
     <div class="card">
-      <h4 class="card-title">Production Code Quality</h4>
-      <p class="text-secondary" style="margin: 0;">Idiomatic Rust following best practices. Clean, maintainable, and well-documented implementations.</p>
+      <h4 class="card-title">Production code</h4>
+      <p style="margin: 0; font-size: 15px; color: var(--text-secondary);">Idiomatic Rust. Clean, maintainable, documented. Interview-ready implementations.</p>
     </div>
 
     <div class="card">
-      <h4 class="card-title">Comprehensive Testing</h4>
-      <p class="text-secondary" style="margin: 0;">Edge cases, boundary values, and property tests. 95%+ coverage for interview readiness.</p>
+      <h4 class="card-title">Comprehensive testing</h4>
+      <p style="margin: 0; font-size: 15px; color: var(--text-secondary);">Edge cases. Boundary values. Property tests. 95%+ coverage standard.</p>
     </div>
 
     <div class="card">
-      <h4 class="card-title">First Principles</h4>
-      <p class="text-secondary" style="margin: 0;">Deep understanding of WHY patterns work, not just HOW to implement them. Theory-backed solutions.</p>
+      <h4 class="card-title">First principles</h4>
+      <p style="margin: 0; font-size: 15px; color: var(--text-secondary);">WHY patterns work, not just HOW. Theory-backed. Deep understanding.</p>
     </div>
   </div>
 </div>
 
 <div class="section">
-  <div class="card" style="background: var(--google-blue-light); border-color: var(--google-blue);">
-    <h3 style="margin: 0 0 16px 0; color: var(--google-blue);">Open Source Infrastructure</h3>
-    <p class="text-secondary" style="margin-bottom: 20px;">This system is designed to be reusable. The master template can be adapted for any project type: frontend development, system design, backend engineering, or research.</p>
-    <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-      <a href="https://github.com/yourusername/dsa-mastery" class="button-primary">View Repository</a>
-      <a href="infrastructure.html" class="button-secondary">Setup Guide</a>
+  <div class="card" style="background: var(--surface); border: none; padding: 48px 32px;">
+    <div style="max-width: 640px; margin: 0 auto; text-align: center;">
+      <h3 style="margin: 0 0 16px 0;">Reusable Infrastructure</h3>
+      <p style="margin: 0 auto 32px; max-width: 55ch;">
+        This system adapts to any project type. The master template at
+        <code style="font-size: 14px;">~/.claude-infrastructure-master/</code>
+        installs skills, agents, and hooks for DSA, frontend, systems, or research.
+      </p>
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <a href="https://github.com/yourusername/dsa-mastery" class="button-primary">View Repository</a>
+        <a href="infrastructure.html" class="button-secondary">Documentation</a>
+      </div>
     </div>
   </div>
 </div>
 
 <script>
-// Auto-update progress from progress.json
-fetch('data/progress.json')
-  .then(response => response.json())
-  .then(data => {
-    document.getElementById('stat-days').textContent = data.days;
-    document.getElementById('stat-problems').textContent = data.problems_solved;
-    document.getElementById('stat-streak').textContent = data.streak;
-    document.getElementById('stat-writeups').textContent = data.writeups;
+// Load and display progress stats
+(async function() {
+  try {
+    const response = await fetch('data/progress.json');
+    const data = await response.json();
 
-    const patternProgress = (data.patterns_completed / data.total_patterns) * 100;
-    document.getElementById('pattern-progress').style.width = patternProgress + '%';
-  })
-  .catch(err => console.log('Progress data will load when available'));
+    // Animate numbers
+    function animateValue(id, end) {
+      const el = document.getElementById(id);
+      const duration = 1200;
+      const start = 0;
+      const startTime = performance.now();
+
+      function update(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easeProgress = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+        const current = Math.floor(start + (end - start) * easeProgress);
+        el.textContent = current;
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else {
+          el.textContent = end;
+        }
+      }
+
+      requestAnimationFrame(update);
+    }
+
+    // Update stats with animation
+    animateValue('stat-days', data.days);
+    animateValue('stat-problems', data.problems_solved);
+    animateValue('stat-streak', data.streak);
+    animateValue('stat-writeups', data.writeups);
+
+    // Update pattern progress
+    document.getElementById('current-pattern-title').textContent = data.current_pattern || 'Two Pointers';
+    document.getElementById('patterns-completed').textContent = data.patterns_completed || 0;
+    document.getElementById('total-patterns').textContent = data.total_patterns || 15;
+
+    const progressPercent = ((data.patterns_completed || 0) / (data.total_patterns || 15)) * 100;
+    setTimeout(() => {
+      document.getElementById('pattern-progress').style.width = progressPercent + '%';
+    }, 200);
+
+  } catch (err) {
+    // Graceful degradation if data unavailable
+    ['stat-days', 'stat-problems', 'stat-streak', 'stat-writeups'].forEach(id => {
+      document.getElementById(id).textContent = '0';
+    });
+  }
+})();
+
+// Mouse tracking for feature cards
+document.querySelectorAll('.feature-card').forEach(card => {
+  card.addEventListener('mousemove', (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    card.style.setProperty('--mouse-x', x + '%');
+    card.style.setProperty('--mouse-y', y + '%');
+  });
+});
 </script>
-
-<style>
-/* Page-specific enhancements */
-.hero h1 {
-  background: linear-gradient(135deg, #1a73e8 0%, #4285f4 50%, #1a73e8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.feature-card:hover {
-  border-color: var(--google-blue);
-}
-
-.pattern-card:hover .pattern-title {
-  color: var(--google-blue);
-}
-</style>

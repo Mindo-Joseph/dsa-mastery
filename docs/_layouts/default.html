@@ -7,96 +7,197 @@
 
     {% seo %}
 
-    <!-- Google Material Design styles -->
+    <!-- Apple-inspired styles -->
     <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
-    <!-- Font optimization -->
+    <!-- Font preload -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <meta name="theme-color" content="#1a73e8">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000000">
   </head>
   <body>
     <!-- Breadcrumb navigation -->
     {% if page.show_breadcrumb %}
     <div class="container-lg">
-      <div class="breadcrumb no-print">
+      <nav class="breadcrumb no-print" aria-label="Breadcrumb">
         <a href="{{ '/' | relative_url }}">Home</a>
-        <span class="breadcrumb-separator">›</span>
+        <span class="breadcrumb-separator" aria-hidden="true">›</span>
         {% if page.category %}
         <a href="{{ page.category_url | relative_url }}">{{ page.category }}</a>
-        <span class="breadcrumb-separator">›</span>
+        <span class="breadcrumb-separator" aria-hidden="true">›</span>
         {% endif %}
-        <span>{{ page.title }}</span>
-      </div>
+        <span aria-current="page">{{ page.title }}</span>
+      </nav>
     </div>
     {% endif %}
 
     <!-- Main content -->
-    <div class="container-lg animate-fade-in">
+    <main class="container-lg">
       {{ content }}
-    </div>
+    </main>
 
     <!-- Footer -->
-    <div class="container-lg">
+    <footer class="container-lg">
       <div class="footer no-print">
-        <p style="font-weight: 500; color: var(--text-secondary);">
-          DSA Mastery
-        </p>
-        <p style="color: var(--text-tertiary);">
-          AI-enhanced learning system for Google L5+ engineering standards
-        </p>
+        <p>DSA Mastery</p>
+        <p>AI-enhanced learning for Google L5+ standards</p>
         {% if site.github.private != true %}
         <p>
-          <a href="{{ site.github.repository_url }}">View on GitHub</a>
+          <a href="{{ site.github.repository_url }}">GitHub</a>
           {% if site.github.license %}
-          · <a href="{{ site.github.repository_url }}/blob/main/LICENSE">{{ site.github.license.name }}</a>
+          <span style="color: var(--text-tertiary);"> · </span>
+          <a href="{{ site.github.repository_url }}/blob/main/LICENSE">{{ site.github.license.name }}</a>
           {% endif %}
         </p>
         {% endif %}
-        <p style="font-size: 0.75rem; color: var(--text-tertiary); margin-top: 16px;">
-          Built with Rust, Gemini RAG, and Claude Code • Last updated: {{ site.time | date: '%B %d, %Y' }}
+        <p style="font-size: 12px; margin-top: 16px;">
+          Built with Rust, Gemini RAG, and Claude Code
         </p>
       </div>
-    </div>
+    </footer>
 
-    <!-- Smooth scroll and animations -->
+    <!-- Intersection Observer animations -->
     <script>
-      // Smooth scroll for anchor links
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
-          if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      (function() {
+        'use strict';
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href === '#') return;
+
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              const offsetTop = target.getBoundingClientRect().top + window.pageYOffset - 80;
+              window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+              });
+            }
+          });
+        });
+
+        // Sophisticated scroll-driven reveal animations
+        const observerOptions = {
+          threshold: [0, 0.1, 0.5],
+          rootMargin: '0px 0px -80px 0px'
+        };
+
+        const revealObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry, index) => {
+            if (entry.isIntersecting && entry.intersectionRatio >= 0.1) {
+              // Stagger animation delay based on position
+              const delay = index * 50;
+              setTimeout(() => {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+              }, delay);
+
+              // Unobserve once animated
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        // Apply animations when DOM is ready
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initAnimations);
+        } else {
+          initAnimations();
+        }
+
+        function initAnimations() {
+          // Reveal cards with stagger
+          const cards = document.querySelectorAll('.card, .feature-card, .stat-card, .pattern-card');
+          cards.forEach((el, i) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(24px)';
+            el.style.transition = `opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)`;
+            el.style.transitionDelay = `${Math.min(i * 0.05, 0.3)}s`;
+            revealObserver.observe(el);
+          });
+
+          // Reveal sections
+          const sections = document.querySelectorAll('.section');
+          sections.forEach((el) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(32px)';
+            el.style.transition = 'opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+            revealObserver.observe(el);
+          });
+
+          // Stats counter animation on scroll into view
+          const statValues = document.querySelectorAll('.stat-value');
+          const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                const el = entry.target;
+                const text = el.textContent;
+                if (text !== '—' && !isNaN(text)) {
+                  animateCounter(el, parseInt(text));
+                }
+                statsObserver.unobserve(el);
+              }
+            });
+          }, { threshold: 0.5 });
+
+          statValues.forEach(el => statsObserver.observe(el));
+        }
+
+        function animateCounter(element, target) {
+          const duration = 1500;
+          const start = 0;
+          const startTime = performance.now();
+
+          function update(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+
+            // Ease-out cubic
+            const easeProgress = 1 - Math.pow(1 - progress, 3);
+            const current = Math.floor(start + (target - start) * easeProgress);
+
+            element.textContent = current;
+
+            if (progress < 1) {
+              requestAnimationFrame(update);
+            } else {
+              element.textContent = target;
+            }
+          }
+
+          requestAnimationFrame(update);
+        }
+
+        // Parallax effect on scroll (subtle)
+        let ticking = false;
+        window.addEventListener('scroll', () => {
+          if (!ticking) {
+            window.requestAnimationFrame(() => {
+              const scrolled = window.pageYOffset;
+              const hero = document.querySelector('.hero');
+              if (hero && scrolled < 800) {
+                hero.style.transform = `translateY(${scrolled * 0.3}px)`;
+                hero.style.opacity = Math.max(1 - scrolled / 600, 0);
+              }
+              ticking = false;
+            });
+            ticking = true;
           }
         });
-      });
 
-      // Intersection Observer for fade-in animations
-      const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-      };
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-          }
-        });
-      }, observerOptions);
-
-      // Observe cards and feature elements
-      document.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('.card, .feature-card, .stat-card, .pattern-card').forEach(el => {
-          el.style.opacity = '0';
-          el.style.transform = 'translateY(20px)';
-          el.style.transition = 'opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
-          observer.observe(el);
-        });
-      });
+        // Prefers reduced motion
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          document.querySelectorAll('*').forEach(el => {
+            el.style.animation = 'none';
+            el.style.transition = 'none';
+          });
+        }
+      })();
     </script>
   </body>
 </html>
