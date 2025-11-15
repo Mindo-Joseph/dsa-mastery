@@ -1,0 +1,22 @@
+{
+  "generated_at": "2025-11-15T11:23:40.656958",
+  "days": 1,
+  "problems_solved": 1,
+  "streak": 0,
+  "writeups": 4,
+  "current_pattern": "Two Pointers",
+  "current_pattern_progress": 0,
+  "total_patterns": 15,
+  "patterns_completed": 0,
+  "infrastructure": {
+    "skills": 4,
+    "agents": 3,
+    "hooks": 5,
+    "tools": 1
+  },
+  "stats": {
+    "avg_time_per_problem": 60,
+    "target_problems": 70,
+    "target_weeks": 12
+  }
+}
