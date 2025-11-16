@@ -1,0 +1,147 @@
+{
+  "version": "1.0",
+  "description": "Skill activation rules for dsa-mastery",
+  "skills": {
+    "problem-solver": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "high",
+      "promptTriggers": {
+        "keywords": [
+          "pattern",
+          "algorithm",
+          "complexity",
+          "two pointers",
+          "sliding window",
+          "binary search",
+          "solve",
+          "optimize",
+          "time complexity",
+          "space complexity",
+          "dynamic programming",
+          "dp",
+          "backtracking",
+          "graph",
+          "tree",
+          "heap",
+          "linked list",
+          "array",
+          "string",
+          "hash",
+          "sort",
+          "search"
+        ],
+        "intentPatterns": [
+          "(solve|implement|optimize|write).*?(problem|algorithm|solution)",
+          "(analyze|prove|explain|verify).*?(complexity|pattern|approach)",
+          "(what|which|how).*?(pattern|approach|algorithm)",
+          "(is this|check if).*?(optimal|correct|efficient)"
+        ]
+      },
+      "fileTriggers": {
+        "pathPatterns": [
+          "src/patterns/**/*.rs",
+          "daily-problems/**/*.md",
+          "implementations/**/*.rs"
+        ],
+        "contentPatterns": [
+          "pub fn.*Vec<",
+          "pub fn.*->.*Option<",
+          "#\\[cfg\\(test\\)\\]",
+          "assert_eq!",
+          "// Time:",
+          "// Space:"
+        ]
+      }
+    },
+    "gemini-rag-integration": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "high",
+      "promptTriggers": {
+        "keywords": [
+          "query books",
+          "search PDF",
+          "theory",
+          "first principles",
+          "CLRS",
+          "EPI",
+          "CTCI",
+          "gemini",
+          "what does the book say",
+          "according to",
+          "reference",
+          "textbook"
+        ],
+        "intentPatterns": [
+          "(query|search|find|look up).*?(book|PDF|theory|principles|textbook)",
+          "what.*?(book|theory|CLRS|EPI).*?say",
+          "(explain|teach|show).*?(from first principles|theory|concept)"
+        ]
+      }
+    },
+    "pr-review-standards": {
+      "type": "guardrail",
+      "enforcement": "suggest",
+      "priority": "critical",
+      "promptTriggers": {
+        "keywords": [
+          "review",
+          "feedback",
+          "PR",
+          "pull request",
+          "pass",
+          "revise",
+          "optimal",
+          "ready to merge",
+          "looks good",
+          "LGTM"
+        ],
+        "intentPatterns": [
+          "review.*?(solution|PR|code|implementation)",
+          "(is|check if).*?(optimal|correct|ready|good enough)",
+          "should I.*?(merge|submit|commit)"
+        ]
+      },
+      "fileTriggers": {
+        "pathPatterns": [
+          "src/patterns/**/*.rs"
+        ]
+      }
+    },
+    "rust-patterns": {
+      "type": "domain",
+      "enforcement": "suggest",
+      "priority": "medium",
+      "promptTriggers": {
+        "keywords": [
+          "rust",
+          "borrow",
+          "ownership",
+          "lifetime",
+          "iterator",
+          "trait",
+          "idiomatic",
+          "rusty",
+          "cargo",
+          "clippy"
+        ],
+        "intentPatterns": [
+          "(how to|best way).*?rust",
+          "idiomatic.*?rust",
+          "(borrow|ownership|lifetime).*?(error|issue|problem)"
+        ]
+      },
+      "fileTriggers": {
+        "pathPatterns": [
+          "**/*.rs"
+        ],
+        "contentPatterns": [
+          "pub fn",
+          "impl ",
+          "trait "
+        ]
+      }
+    }
+  }
+}
